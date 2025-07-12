@@ -45,6 +45,7 @@ calculator/
 ├── index.html      # Main HTML structure
 ├── styles.css      # Modern CSS styling
 ├── script.js       # JavaScript functionality
+├── vintage-calculator/  # Vintage calculator variant
 └── README.md       # This file
 ```
 
@@ -89,6 +90,10 @@ The calculator is easily customizable by modifying:
 - `script.js` for functionality changes
 - `index.html` for structural changes
 
+## Variants
+
+This project includes both a modern calculator and a vintage calculator variant located in the `vintage-calculator/` directory.
+
 ## License
 
-This project is open source and available under the MIT License. 
+This project is open source and available under the MIT License.
