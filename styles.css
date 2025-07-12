@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    padding: 20px;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 350px;
+    width: 100%;
+}
+
+.display {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    min-height: 1.5rem;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn.clear {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.btn.clear:hover {
+    background: linear-gradient(135deg, #ff5252, #d32f2f);
+}
+
+.btn.operator {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.btn.operator:hover {
+    background: linear-gradient(135deg, #26a69a, #00897b);
+}
+
+.btn.equals {
+    background: linear-gradient(135deg, #ffa726, #ff9800);
+    grid-column: span 2;
+}
+
+.btn.equals:hover {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.btn.number {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.btn.number:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+        max-width: 320px;
+    }
+    
+    .btn {
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+    
+    .current-operand {
+        font-size: 2rem;
+    }
+    
+    .previous-operand {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for button press */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Smooth transitions for display updates */
+.display * {
+    transition: all 0.2s ease;
+} 
